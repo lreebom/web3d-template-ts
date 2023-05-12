@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans-CN">
+
+<head>
+    <meta charset="UTF-8" name="viewport"
+          content="width=device-width,initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1,viewport-fit=cover">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+    <style>
+        html {
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            touch-action: none;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        body {
+            position: absolute;
+            margin: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            touch-action: none;
+        }
+
+        #app-container {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        #loading-container {
+            position: fixed;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+        }
+    </style>
+    <script type="text/javascript">
+        window.addEventListener('message', event => {
+            if (event.data.type === "CloseAppLoadingUI") {
+                var loadingContainer = document.getElementById("loading-container");
+                if (loadingContainer) {
+                    loadingContainer.remove();
+                }
+            }
+        });
+    </script>
+</head>
+
+<body>
+<div id="app-container"></div>
+<div id="loading-container">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         style="margin: auto; background: rgba(255, 255, 255, 0); display: block;" width="256px" height="256px"
+         viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+        <defs>
+            <filter id="loading-circle-filter" x="-100%" y="-100%" width="300%" height="300%"
+                    color-interpolation-filters="sRGB">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="2.5"></feGaussianBlur>
+                <feComponentTransfer result="cutoff">
+                    <feFuncA type="table" tableValues="0 0 0 0 0 0 1 1 1 1 1"></feFuncA>
+                </feComponentTransfer>
+            </filter>
+        </defs>
+        <g filter="url(#loading-circle-filter)">
+            <g transform="translate(50 50)">
+                <g>
+                    <circle cx="17" cy="0" r="5" fill="#e15b64">
+                        <animate attributeName="r" keyTimes="0;0.5;1"
+                                 values="3.5999999999999996;8.399999999999999;3.5999999999999996"
+                                 dur="6.666666666666666s" repeatCount="indefinite"
+                                 begin="-0.15000000000000002s"></animate>
+                    </circle>
+                    <animateTransform attributeName="transform" type="rotate" keyTimes="0;1" values="0;360"
+                                      dur="6.666666666666666s" repeatCount="indefinite" begin="0s"></animateTransform>
+                </g>
+            </g>
+            <g transform="translate(50 50)">
+                <g>
+                    <circle cx="17" cy="0" r="5" fill="#f47e60">
+                        <animate attributeName="r" keyTimes="0;0.5;1"
+                                 values="3.5999999999999996;8.399999999999999;3.5999999999999996"
+                                 dur="3.333333333333333s" repeatCount="indefinite"
+                                 begin="-0.12000000000000002s"></animate>
+                    </circle>
+                    <animateTransform attributeName="transform" type="rotate" keyTimes="0;1" values="0;360"
+                                      dur="3.333333333333333s" repeatCount="indefinite"
+                                      begin="-0.030000000000000006s"></animateTransform>
+                </g>
+            </g>
+            <g transform="translate(50 50)">
+                <g>
+                    <circle cx="17" cy="0" r="5" fill="#f8b26a">
+                        <animate attributeName="r" keyTimes="0;0.5;1"
+                                 values="3.5999999999999996;8.399999999999999;3.5999999999999996"
+                                 dur="2.222222222222222s" repeatCount="indefinite"
+                                 begin="-0.09000000000000001s"></animate>
+                    </circle>
+                    <animateTransform attributeName="transform" type="rotate" keyTimes="0;1" values="0;360"
+                                      dur="2.222222222222222s" repeatCount="indefinite"
+                                      begin="-0.06000000000000001s"></animateTransform>
+                </g>
+            </g>
+            <g transform="translate(50 50)">
+                <g>
+                    <circle cx="17" cy="0" r="5" fill="#abbd81">
+                        <animate attributeName="r" keyTimes="0;0.5;1"
+                                 values="3.5999999999999996;8.399999999999999;3.5999999999999996"
+                                 dur="1.6666666666666665s" repeatCount="indefinite"
+                                 begin="-0.06000000000000001s"></animate>
+                    </circle>
+                    <animateTransform attributeName="transform" type="rotate" keyTimes="0;1" values="0;360"
+                                      dur="1.6666666666666665s" repeatCount="indefinite"
+                                      begin="-0.09000000000000001s"></animateTransform>
+                </g>
+            </g>
+            <g transform="translate(50 50)">
+                <g>
+                    <circle cx="17" cy="0" r="5" fill="#65a56e">
+                        <animate attributeName="r" keyTimes="0;0.5;1"
+                                 values="3.5999999999999996;8.399999999999999;3.5999999999999996"
+                                 dur="1.333333333333333s" repeatCount="indefinite"
+                                 begin="-0.030000000000000006s"></animate>
+                    </circle>
+                    <animateTransform attributeName="transform" type="rotate" keyTimes="0;1" values="0;360"
+                                      dur="1.333333333333333s" repeatCount="indefinite"
+                                      begin="-0.12000000000000002s"></animateTransform>
+                </g>
+            </g>
+        </g>
+    </svg>
+</div>
+</body>
+
+</html>

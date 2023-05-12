@@ -1,0 +1,54 @@
+{
+  "name": "web3d-template-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx webpack server --config webpack.dev.js",
+    "watch": "npx webpack watch --config webpack.dev.js",
+    "build": "npx webpack --config webpack.prod.js",
+    "build-dev": "npx webpack --config webpack.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lreebom/web3d-template-ts.git"
+  },
+  "author": "liubo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lreebom/web3d-template-ts/issues"
+  },
+  "homepage": "https://github.com/lreebom/web3d-template-ts#readme",
+  "dependencies": {
+    "babylonjs": "^6.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.1",
+    "mini-css-extract-plugin": "^2.7.5",
+    "npm-check-updates": "^16.10.10",
+    "postcss-loader": "^7.3.0",
+    "postcss-preset-env": "^8.3.2",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.2.2",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.82.0",
+    "webpack-cli": "^5.1.0",
+    "webpack-dev-server": "^4.15.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "chrome 79",
+    "firefox 79",
+    "edge 79"
+  ]
+}
