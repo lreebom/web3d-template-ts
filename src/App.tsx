@@ -9,7 +9,6 @@ class App extends React.PureComponent {
         return (<div className={"app-root fill-parent"}>
             <AppView id={"001"}/>
             <AppUI/>
-
         </div>);
     }
 
@@ -18,7 +17,7 @@ class App extends React.PureComponent {
             window.postMessage({
                 type: "CloseAppLoadingUI",
             });
-        }, 500);
+        }, 1);
     }
 }
 
