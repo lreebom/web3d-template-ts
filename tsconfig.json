@@ -11,7 +11,7 @@
     // "disableReferencedProjectLoad": true,             /* Reduce the number of projects loaded automatically by TypeScript. */
 
     /* Language and Environment */
-    "target": "ES5",
+    "target": "ES6",
     /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
     "lib": [
       "ESNext",
@@ -31,7 +31,7 @@
     // "moduleDetection": "auto",                        /* Control what method is used to detect module-format JS files. */
 
     /* Modules */
-    "module": "ESNext",
+    "module": "CommonJS",
     /* Specify what module code is generated. */
     // "rootDir": "./",                                  /* Specify the root folder within your source files. */
     "moduleResolution": "node",
@@ -121,5 +121,13 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true
     /* Skip type checking all .d.ts files. */
-  }
+  },
+  "include": [
+    "src",
+    "declaration.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
